@@ -460,9 +460,41 @@ describe("template spec", () => {
     cy.get("#DamagedFoundAndReportedToMaster").click();
     cy.get('li[data-value="false"]').click();
 
-    cy.get("CheckedInspectionPhoto").click();
+    cy.get("#CheckedInspectionPhoto").click();
     cy.get('li[data-value="false"]').click();
 
     cy.get("button").contains("Continue").click();
+    //-------------------//
+
+    cy.get("#Remarks4").type("All post cleaning are working properly");
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
+    cy.get("#StarboardSideAC").click();
+    cy.get('li[data-value="clean"]').click();
+
+    cy.get("#PortSideAC").click();
+    cy.get('li[data-value="Dirty"]').click();
+
+    cy.get("#FlatBottomAC").click();
+    cy.get('li[data-value="Dirty"]').click();
+
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
+    cy.get("#Remarks5").type("All sketches working properly");
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
+
+    cy.get("#CoatingType").click();
+    cy.get('li[data-value="Conventional"]').click();
+
+    cy.get("#CoatingCondition").click();
+    cy.get('li[data-value="Satisfactory"]').click();
+
+    cy.get("#bow-port-side-type-label").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
   });
 });
