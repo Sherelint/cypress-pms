@@ -492,9 +492,45 @@ describe("template spec", () => {
 
     cy.get("#CoatingCondition").click();
     cy.get('li[data-value="Satisfactory"]').click();
+    //-------------------//
 
-    cy.get("#bow-port-side-type-label").click();
+    cy.get("#bow-port-side-type").click();
     cy.get("li[data-value='Scratches']").click();
     cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#bow-port-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#bow-port-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+//-------------------//
+    cy.get("#bow-flat-bottom-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#bow-flat-bottom-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#bow-flat-bottom-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("#bow-stb-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#bow-stb-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#bow-stb-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
   });
 });
