@@ -65,16 +65,143 @@ describe("template spec", () => {
     cy.get("button").contains("Continue").click();
 
     //-------------------//
-    
-    cy.get('#bow-port-side-type').click();
+
+    cy.get("#bow-port-side-type").click();
     cy.get('li[data-value="Barnacles"]').click();
     cy.get('li[data-value="Algae"]').click();
-    cy.get('body').click();
-    cy.get('#bow-port-side-area').click();
+    cy.get("body").click();
+    cy.get("#bow-port-side-area").click();
     cy.get('li[data-value="40%"]').click();
-    cy.get('body').click();
-    cy.get('#bow-port-side-severity').click();
+    cy.get("body").click();
+    cy.get("#bow-port-side-severity").click();
     cy.get('li[data-value="10"]').click();
-    cy.get('body').click();
+    cy.get("body").click();
+    cy.get("#height-bow-port-side").type("110");
+
+    cy.get("#bow-flat-bottom-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#bow-flat-bottom-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#bow-flat-bottom-severity").click();
+    cy.get('li[data-value="20"]').click();
+    cy.get("body").click();
+    cy.get("#height-bow-flat-bottom").type("105");
+
+    cy.get("#bow-stb-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#bow-stb-side-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#bow-stb-side-severity").click();
+    cy.get('li[data-value="30"]').click();
+    cy.get("body").click();
+    cy.get("#height-bow-stb-side-bottom").type("100");
+
+    cy.get("button").contains("Midship").click();
+
+    cy.get("#midship-port-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#midship-port-side-area").click();
+    cy.get('li[data-value="40%"]').click();
+    cy.get("body").click();
+    cy.get("#midship-port-side-severity").click();
+    cy.get('li[data-value="10"]').click();
+    cy.get("body").click();
+    cy.get("#height-midship-port-side").type("110");
+
+    cy.get("#midship-flat-bottom-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#midship-flat-bottom-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#midship-flat-bottom-severity").click();
+    cy.get('li[data-value="20"]').click();
+    cy.get("body").click();
+    cy.get("#height-midship-flat-bottom").type("105");
+
+    cy.get("#midship-stb-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#midship-stb-side-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#midship-stb-side-severity").click();
+    cy.get('li[data-value="30"]').click();
+    cy.get("body").click();
+    cy.get("#height-midship-stb-side-bottom").type("100");
+
+    cy.get("button").contains("Stern").click();
+
+    cy.get("#stern-port-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#stern-port-side-area").click();
+    cy.get('li[data-value="40%"]').click();
+    cy.get("body").click();
+    cy.get("#stern-port-side-severity").click();
+    cy.get('li[data-value="10"]').click();
+    cy.get("body").click();
+    cy.get("#height-stern-port-side").type("110");
+
+    cy.get("#stern-flat-bottom-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#stern-flat-bottom-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#stern-flat-bottom-severity").click();
+    cy.get('li[data-value="20"]').click();
+    cy.get("body").click();
+    cy.get("#height-stern-flat-bottom").type("105");
+
+    cy.get("#stern-stb-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#stern-stb-side-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#stern-stb-side-severity").click();
+    cy.get('li[data-value="30"]').click();
+    cy.get("body").click();
+    cy.get("#height-stern-stb-side-bottom").type("100");
+
+    cy.get("button").contains("Bilge Keels").click();
+
+    cy.get("#bilge-keels-port-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#bilge-keels-port-side-area").click();
+    cy.get('li[data-value="40%"]').click();
+    cy.get("body").click();
+    cy.get("#bilge-keels-port-side-severity").click();
+    cy.get('li[data-value="10"]').click();
+    cy.get("body").click();
+    cy.get("#height-bilge-keels-port-side").type("110");
+
+    cy.get("#bilge-keels-stb-side-type").click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get("body").click();
+    cy.get("#bilge-keels-stb-side-area").click();
+    cy.get('li[data-value="30%"]').click();
+    cy.get("body").click();
+    cy.get("#bilge-keels-stb-side-severity").click();
+    cy.get('li[data-value="30"]').click();
+    cy.get("body").click();
+    cy.get("#height-bilge-keels-stb-side-bottom").type("100");
   });
 });
