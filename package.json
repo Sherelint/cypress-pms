@@ -1,0 +1,16 @@
+{
+	"name": "cypress",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"cypress": "npx cypress open",
+		"test": "npx cypress open --headless"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"cypress": "^13.14.2"
+	}
+}
