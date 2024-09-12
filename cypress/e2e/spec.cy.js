@@ -36,7 +36,7 @@ describe("template spec", () => {
     cy.get('input[id="Owners"]').type("Michael Chung");
     cy.get("button").contains("Continue").click();
 
-    //----
+    //-------------------//
 
     cy.get('#PhotoInspection > span > input[type="checkbox"]').check();
     cy.get('#VideoInspection > span > input[type="checkbox"]').check();
@@ -45,6 +45,36 @@ describe("template spec", () => {
     cy.get('li[data-value="RINA"]').click();
     cy.get('#Repairs> span > input[type="checkbox"]').check();
 
+    cy.get('#BowArea> span > input[type="checkbox"]').check();
+    cy.get('#Transducers> span > input[type="checkbox"]').check();
+    cy.get('#Thrusters> span > input[type="checkbox"]').check();
+    cy.get('#VerticalSides> span > input[type="checkbox"]').check();
+    cy.get('#SeaChestGrids> span > input[type="checkbox"]').check();
+    cy.get('#SternFrame> span > input[type="checkbox"]').check();
+    cy.get('#PropellerPolishing> span > input[type="checkbox"]').check();
+    cy.get('#BilgeKeels> span > input[type="checkbox"]').check();
+    cy.get('#FlatBottom> span > input[type="checkbox"]').check();
+    cy.get('#RopeGuard> span > input[type="checkbox"]').check();
+    cy.get('#Rudder> span > input[type="checkbox"]').check();
+    cy.get('#Other> span > input[type="checkbox"]').check();
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
+
+    cy.get("#Remarks1").type("All checks working properly");
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
     
+    cy.get('#bow-port-side-type').click();
+    cy.get('li[data-value="Barnacles"]').click();
+    cy.get('li[data-value="Algae"]').click();
+    cy.get('body').click();
+    cy.get('#bow-port-side-area').click();
+    cy.get('li[data-value="40%"]').click();
+    cy.get('body').click();
+    cy.get('#bow-port-side-severity').click();
+    cy.get('li[data-value="10"]').click();
+    cy.get('body').click();
   });
 });
