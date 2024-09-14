@@ -505,7 +505,7 @@ describe("template spec", () => {
     cy.get("#bow-port-side-general-condition").click();
     cy.get("li[data-value='Satisfactory']").click();
 
-//-------------------//
+    //-------------------//
     cy.get("#bow-flat-bottom-type").click();
     cy.get("li[data-value='Scratches']").click();
     cy.get("li[data-value='Corrosion']").click();
@@ -529,8 +529,240 @@ describe("template spec", () => {
 
     cy.get("#bow-stb-side-general-condition").click();
     cy.get("li[data-value='Satisfactory']").click();
+    cy.get("button").contains("Midship").click();
 
     //-------------------//
 
+    cy.get("#midship-port-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#midship-port-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#midship-port-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("#midship-flat-bottom-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#midship-flat-bottom-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#midship-flat-bottom-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("#midship-stb-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#midship-stb-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#midship-stb-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+    cy.get("button").contains("Stern").click();
+    //-------------------//
+
+    cy.get("#stern-port-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#stern-port-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#stern-port-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("#stern-flat-bottom-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#stern-flat-bottom-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#stern-flat-bottom-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("#stern-stb-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#stern-stb-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#stern-stb-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+    cy.get("button").contains("Bilge Keels").click();
+
+    //-------------------//
+    cy.get("#bilge-keels-port-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#bilge-keels-port-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#bilge-keels-port-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("#bilge-keels-stb-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#bilge-keels-stb-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#bilge-keels-stb-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+    cy.get("button").contains("Sea Chest Grids").click();
+
+    //-------------------//
+    cy.get("#sea-chest-grids-port-side-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#sea-chest-grids-port-side-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#sea-chest-grids-port-side-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+    cy.get("button").contains("Propeller").click();
+
+    //-------------------//
+
+    cy.get("#propeller-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#propeller-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#propeller-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+    cy.get("button").contains("Rudder").click();
+
+    //-------------------//
+
+    cy.get("#rudder-type").click();
+    cy.get("li[data-value='Scratches']").click();
+    cy.get("li[data-value='Corrosion']").click();
+    cy.get("body").click();
+
+    cy.get("#rudder-area").click();
+    cy.get("li[data-value='40%']").click();
+
+    cy.get("#rudder-general-condition").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    //-------------------//
+
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
+
+    cy.get("#Remarks6").type("All paint damages are working properly");
+
+    //-------------------//
+
+    cy.get("button").contains("Continue").click();
+
+    //-------------------//
+
+    cy.get("div").contains("Bow").click();
+
+    cy.get("#ShellPlateGeneral").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    cy.get("#ShellPlateCorrosion").click();
+    cy.get("li[data-value='No']").click();
+
+    cy.get("#ShellPlateIndent").click();
+    cy.get("li[data-value='No']").click();
+
+    cy.get("button").contains("Welding Seam").click();
+    cy.get("#SPWeldingSeamGeneral").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    cy.get("#SPWeldingSeamCorrosion").click();
+    cy.get("li[data-value='Yes']").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks4").type("bow ok");
+
+    //-------------------//
+
+    cy.get("div").contains("Vertical Side Port Side").click();
+
+    cy.get("#ShellPlateGeneral").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    cy.get("#ShellPlateCorrosion").click();
+    cy.get("li[data-value='No']").click();
+
+    cy.get("#ShellPlateIndent").click();
+    cy.get("li[data-value='No']").click();
+
+    cy.get("button").contains("Welding Seam").click();
+    cy.get("#WeldingSeamGeneral").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    cy.get("#WeldingSeamCorrosion").click();
+    cy.get("li[data-value='Yes']").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks4").type("vertical port side damaged");
+
+    //-------------------//
+
+    cy.get("div").contains("Vertical Side Starboard Side").click();
+
+    cy.get("#ShellPlateGeneral").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    cy.get("#ShellPlateCorrosion").click();
+    cy.get("li[data-value='No']").click();
+
+    cy.get("#ShellPlateIndent").click();
+    cy.get("li[data-value='No']").click();
+
+    cy.get("button").contains("Welding Seam").click();
+    cy.get("#WeldingSeamGeneral").click();
+    cy.get("li[data-value='Satisfactory']").click();
+
+    cy.get("#WeldingSeamCorrosion").click();
+    cy.get("li[data-value='Yes']").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks4").type("vertical port side damaged");
+
+    //-------------------//
+    cy.get("div").contains("Bilge Keels").click();
+
+    cy.get("#GeneralType").click();
+    cy.get("li[data-value='split']").click();
+
+    cy.get("#NoSections").type("2");
   });
 });
