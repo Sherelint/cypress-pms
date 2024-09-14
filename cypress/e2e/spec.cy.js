@@ -696,17 +696,17 @@ describe("template spec", () => {
     cy.get("li[data-value='Satisfactory']").click();
 
     cy.get("#ShellPlateCorrosion").click();
-    cy.get("li[data-value='No']").click();
+    cy.get("li[data-value='false']").click();
 
     cy.get("#ShellPlateIndent").click();
-    cy.get("li[data-value='No']").click();
+    cy.get("li[data-value='false']").click();
 
     cy.get("button").contains("Welding Seam").click();
-    cy.get("#SPWeldingSeamGeneral").click();
+    cy.get("#WeldingSeamGeneral").click();
     cy.get("li[data-value='Satisfactory']").click();
 
-    cy.get("#SPWeldingSeamCorrosion").click();
-    cy.get("li[data-value='Yes']").click();
+    cy.get("#WeldingSeamCorrosion").click();
+    cy.get("li[data-value='true']").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks4").type("bow ok");
@@ -719,17 +719,17 @@ describe("template spec", () => {
     cy.get("li[data-value='Satisfactory']").click();
 
     cy.get("#ShellPlateCorrosion").click();
-    cy.get("li[data-value='No']").click();
+    cy.get("li[data-value='Forward']").click();
 
     cy.get("#ShellPlateIndent").click();
-    cy.get("li[data-value='No']").click();
+    cy.get("li[data-value='false']").click();
 
     cy.get("button").contains("Welding Seam").click();
     cy.get("#WeldingSeamGeneral").click();
     cy.get("li[data-value='Satisfactory']").click();
 
     cy.get("#WeldingSeamCorrosion").click();
-    cy.get("li[data-value='Yes']").click();
+    cy.get("li[data-value='true']").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks4").type("vertical port side damaged");
@@ -742,17 +742,17 @@ describe("template spec", () => {
     cy.get("li[data-value='Satisfactory']").click();
 
     cy.get("#ShellPlateCorrosion").click();
-    cy.get("li[data-value='No']").click();
+    cy.get("li[data-value='Aft']").click();
 
     cy.get("#ShellPlateIndent").click();
-    cy.get("li[data-value='No']").click();
+    cy.get("li[data-value='false']").click();
 
     cy.get("button").contains("Welding Seam").click();
     cy.get("#WeldingSeamGeneral").click();
     cy.get("li[data-value='Satisfactory']").click();
 
     cy.get("#WeldingSeamCorrosion").click();
-    cy.get("li[data-value='Yes']").click();
+    cy.get("li[data-value='true']").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks4").type("vertical port side damaged");
@@ -764,5 +764,14 @@ describe("template spec", () => {
     cy.get("li[data-value='split']").click();
 
     cy.get("#NoSections").type("2");
+
+    cy.get("button").contains("Port Side").click();
+    cy.get("#DamagesFound").click();
+    cy.get("li[data-value='true']").click();
+
+    cy.get("#Anodes").click();
+
+    cy.get("#AnodesRemaining").type("50");
+    cy.get("#Below").click();
   });
 });
