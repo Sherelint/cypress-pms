@@ -849,6 +849,7 @@ describe("template spec", () => {
 
     cy.get("#STAnodes").type("3");
     cy.get("#STAMissing").click();
+    cy.get("#STANA").click();
     cy.get("#STARemaining").type("50");
     cy.get("#StainlessFalse").click();
     cy.get("#BracketTrue").click();
@@ -920,5 +921,18 @@ describe("template spec", () => {
     cy.get("#PropellerCementCoversIntact > input[value=true]").click();
 
     cy.get("button").contains("Pressure Side").click();
+    cy.get("#BeforePolish > #1").type("A");
+    cy.get("#BeforePolish > #2").type("B");
+    cy.get("#BeforePolish > #3").type("C");
+    cy.get("#BeforePolish > #4").type("D");
+    cy.get("#BeforePolish > #5").type("E");
+    cy.get("#BeforePolish > #6").type("F");
+
+    cy.get("#AfterPolish > #1").type("A");
+    cy.get("#AfterPolish > #2").type("B");
+    cy.get("#AfterPolish > #3").type("C");
+    cy.get("#AfterPolish > #4").type("D");
+    cy.get("#AfterPolish > #5").type("E");
+    cy.get("#AfterPolish > #6").type("F");
   });
 });
