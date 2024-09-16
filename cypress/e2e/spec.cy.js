@@ -1,6 +1,7 @@
 describe("template spec", () => {
   it("passes", () => {
     cy.visit("http://localhost:5173/");
+    cy.get("div").contains("Reports").click();
     cy.get('input[id="email"]').type("fdegracia@msupply.com.pa");
     cy.get('input[id="password"]').type("12345");
     cy.get("button").contains("Iniciar Sesión").click();
@@ -773,5 +774,51 @@ describe("template spec", () => {
 
     cy.get("#AnodesRemaining").type("50");
     cy.get("#Below").click();
+
+    //-------------------//
+    cy.get("div").contains("Sea Chest Grids").click();
+    cy.get("input[value=Hinged]").click();
+    cy.get("#Total").type("2");
+    cy.get("#FlatBottom").type("3");
+    cy.get("#PortSide").type("4");
+    cy.get("#StbSide").type("5");
+
+    cy.get("input[value=Satisfactory]").click();
+    cy.get("input[value=Intact]").click();
+
+    //-------------------//
+    cy.get("div").contains("Bow Thruster").click();
+    cy.get("#BowThrusterNA").click();
+
+    cy.get("input[value=Hinged]").click();
+    cy.get("#VisibleYes").click();
+
+    cy.get("#Anodes").type("4");
+    cy.get("#StainlessFalse").click();
+    cy.get("#BracketTrue").click();
+    cy.get("#BladesTrue").click();
+    cy.get("#GearFalse").click();
+    cy.get("#OilFalse").click();
+    cy.get("#Welded").click();
+
+    cy.get("button").contains("Bow Thruster 2").click();
+    cy.get("#BowThrusterNA").click();
+
+    cy.get("input[value=Hinged]").click();
+    cy.get("#VisibleYes").click();
+
+    cy.get("#Anodes").type("4");
+    cy.get("#StainlessTrue").click();
+    cy.get("#BracketFalse").click();
+    cy.get("#BladesTrue").click();
+    cy.get("#GearFalse").click();
+    cy.get("#OilFalse").click();
+    cy.get("#Bolted").click();
+    //-------------------//
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("bow thruster not ok");
+    //-------------------//
+
   });
 });
