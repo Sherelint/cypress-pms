@@ -891,5 +891,34 @@ describe("template spec", () => {
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Rope Guard not ok");
+
+    //-------------------//
+    cy.get("div").contains("Tail Shaft (s)").click();
+    cy.get("#TSGeneralCondition > input[value=Satisfactory]").click();
+    cy.get("#TSBoltsCondition > input[value=Fair]").click();
+    cy.get("#TSOilLeak > input[value=No]").click();
+    cy.get("TSWearDownTaken > input[value=No]").click();
+    cy.get("#TopReading").type("20");
+    cy.get("#BottomReading").type("30");
+    cy.get("#TSSecondShaft > input[value=No]").click();
+    cy.get("#SSTopReading").type("20");
+    cy.get("#SSBottomReading").type("30");
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("Tail Shaft not ok");
+
+    //-------------------//
+
+    cy.get("div").contains("Propeller (s)").click();
+    cy.get("#Quantity").type("2");
+    cy.get("#PropellerType > input[value=Fixed]").click();
+    cy.get("#NoOfBlades").type("4");
+    cy.get("#PropellerCondition > input[value=Satisfactory]").click();
+    cy.get("#PropellerDiameter").type("1");
+    cy.get("BoltAssemblyIntact > input[value=true]").click();
+    cy.get("#PropellerBossCone > input[value=Fair]").click();
+    cy.get("#PropellerCementCoversIntact > input[value=true]").click();
+
+    cy.get("button").contains("Pressure Side").click();
   });
 });
