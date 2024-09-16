@@ -818,7 +818,78 @@ describe("template spec", () => {
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("bow thruster not ok");
+    cy.get("div").contains("Stern Thruster").click();
+
     //-------------------//
 
+    cy.get("#SternThrusterNA").click();
+
+    cy.get("input[value=Hinged]").click();
+    cy.get("#STVDfalse").click();
+
+    cy.get("#STAnodes").type("3");
+    cy.get("#STAMissing").click();
+    cy.get("#STARemaining").type("50");
+    cy.get("#StainlessFalse").click();
+    cy.get("#BracketTrue").click();
+    cy.get("#BladesTrue").click();
+    cy.get("#GearFalse").click();
+    cy.get("#OilFalse").click();
+    cy.get("#Welded").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("stern thruster 1 not ok");
+
+    cy.get("button").contains("Stern Thruster 2").click();
+
+    cy.get("#SternThrusterNA").click();
+
+    cy.get("input[value=Hinged]").click();
+    cy.get("#STVDfalse").click();
+
+    cy.get("#STAnodes").type("3");
+    cy.get("#STAMissing").click();
+    cy.get("#STARemaining").type("50");
+    cy.get("#StainlessFalse").click();
+    cy.get("#BracketTrue").click();
+    cy.get("#BladesTrue").click();
+    cy.get("#GearFalse").click();
+    cy.get("#OilFalse").click();
+    cy.get("#Welded").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("Stern thruster 2 not ok");
+
+    //-------------------//
+    cy.get("div").contains("Transducers").click();
+    cy.get("input[value=Bow]").click();
+    cy.get("#TansducersFalse").click();
+    cy.get("input[value=Alt]").click();
+    cy.get("#SLTrue").click();
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("Transducers not ok");
+
+    //-------------------//
+
+    cy.get("div").contains("Cathodic Protection System").click();
+    cy.get("#SacrificialRemainingNA").click();
+    cy.get("#ICCPFalse").click();
+    cy.get("#ICCPVDTrue").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("Cathodic Protection System not ok");
+
+    //-------------------//
+
+    cy.get("div").contains("Rope Guard (s)").click();
+    cy.get("#RGGeneralCondition > input[value=Satisfactory]").click();
+    cy.get("#RGAssembly > input[value=Welded]").click();
+    cy.get("#RGWeldSeams > input[value=Satisfactory]").click();
+    cy.get("#RGVisibleDamage > input[value=yes]").click();
+    cy.get("#RGRopeCutters > input[value=Bolted]").click();
+    cy.get("#RGReadingHoles > input[value=Top]").click();
+
+    cy.get("button").contains("Remarks").click();
+    cy.get("#Remarks").type("Rope Guard not ok");
   });
 });
