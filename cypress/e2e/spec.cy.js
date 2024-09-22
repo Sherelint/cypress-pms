@@ -1013,6 +1013,5 @@ describe("template spec", () => {
     //-------------------//
 
     cy.get("button").contains("Continue").click();
-    
   });
 });
