@@ -20,19 +20,19 @@ describe("template spec", () => {
     cy.get('div[id="VesselType"]').click();
     cy.get('li[data-value="Bulk Carrier"]').click();
 
-    cy.get("input[id=imo]").type("1234567");
+    cy.get("input[id=IMO]").type("1234567");
     cy.get("input[id=LOA]").type("121");
     cy.get("input[id=Breadth]").type("24");
     cy.get("input[id=DraftAFT]").type("22.4");
     cy.get("input[id=DraftFWD]").type("15.2");
     cy.get('div[id="location"]').click();
-    cy.get('li[data-value="1"]').click();
+    cy.get('li[data-value="Balboa Anchorage"]').click();
     cy.get('div[id="WeatherConditions"]').click();
-    cy.get('li[data-value="1"]').click();
+    cy.get('li[data-value="Calm"]').click();
     cy.get('div[id="SeaConditions"]').click();
-    cy.get('li[data-value="1"]').click();
+    cy.get('li[data-value="Calm"]').click();
     cy.get('div[id="SeaCurrent"]').click();
-    cy.get('li[data-value="2"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get('input[id="PortOfRegistry"]').type("Balboa");
     cy.get('input[id="Owners"]').type("Michael Chung");
     cy.get("button").contains("Continue").click();
@@ -75,7 +75,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#bow-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bow-port-side").type("110");
 
@@ -87,7 +87,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#bow-flat-bottom-severity").click();
-    cy.get('li[data-value="20"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bow-flat-bottom").type("105");
 
@@ -99,7 +99,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#bow-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bow-stb-side-bottom").type("100");
 
@@ -113,7 +113,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#midship-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-midship-port-side").type("110");
 
@@ -125,7 +125,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#midship-flat-bottom-severity").click();
-    cy.get('li[data-value="20"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-midship-flat-bottom").type("105");
 
@@ -137,7 +137,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#midship-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-midship-stb-side-bottom").type("100");
 
@@ -151,7 +151,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#stern-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-stern-port-side").type("110");
 
@@ -163,7 +163,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#stern-flat-bottom-severity").click();
-    cy.get('li[data-value="20"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-stern-flat-bottom").type("105");
 
@@ -175,7 +175,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#stern-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-stern-stb-side-bottom").type("100");
 
@@ -189,7 +189,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#bilge-keels-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bilge-keels-port-side").type("110");
 
@@ -201,7 +201,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#bilge-keels-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-bilge-keels-stb-side").type("100");
 
@@ -215,7 +215,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#sea-chest-grids-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-sea-chest-grids-port-side").type("110");
 
@@ -229,7 +229,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#propeller-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-propeller").type("110");
 
@@ -243,7 +243,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#rudder-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-rudder").type("110");
 
@@ -278,7 +278,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#bow-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bow-port-side").type("110");
 
@@ -290,7 +290,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#bow-flat-bottom-severity").click();
-    cy.get('li[data-value="20"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-bow-flat-bottom").type("105");
 
@@ -302,7 +302,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#bow-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bow-stb-side-bottom").type("100");
 
@@ -316,7 +316,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#midship-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-midship-port-side").type("110");
 
@@ -328,7 +328,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#midship-flat-bottom-severity").click();
-    cy.get('li[data-value="20"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-midship-flat-bottom").type("105");
 
@@ -340,7 +340,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#midship-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-midship-stb-side-bottom").type("100");
 
@@ -354,7 +354,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#stern-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-stern-port-side").type("110");
 
@@ -366,7 +366,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#stern-flat-bottom-severity").click();
-    cy.get('li[data-value="20"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-stern-flat-bottom").type("105");
 
@@ -378,7 +378,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#stern-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-stern-stb-side-bottom").type("100");
 
@@ -392,7 +392,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#bilge-keels-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-bilge-keels-port-side").type("110");
 
@@ -404,7 +404,7 @@ describe("template spec", () => {
     cy.get('li[data-value="30%"]').click();
     cy.get("body").click();
     cy.get("#bilge-keels-stb-side-severity").click();
-    cy.get('li[data-value="30"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-bilge-keels-stb-side").type("100");
 
@@ -418,7 +418,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#sea-chest-grids-port-side-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-sea-chest-grids-port-side").type("110");
 
@@ -432,7 +432,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#propeller-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Light"]').click();
     cy.get("body").click();
     cy.get("#height-propeller").type("110");
 
@@ -446,7 +446,7 @@ describe("template spec", () => {
     cy.get('li[data-value="40%"]').click();
     cy.get("body").click();
     cy.get("#rudder-severity").click();
-    cy.get('li[data-value="10"]').click();
+    cy.get('li[data-value="Moderate"]').click();
     cy.get("body").click();
     cy.get("#height-rudder").type("110");
 
@@ -788,7 +788,7 @@ describe("template spec", () => {
 
     //-------------------//
     cy.get("div").contains("Bow Thruster").click();
-    cy.get("#BowThrusterNA").click();
+    //cy.get("#BowThrusterNA").click();
 
     cy.get("input[value=Hinged]").click();
     cy.get("#VisibleYes").click();
@@ -802,7 +802,7 @@ describe("template spec", () => {
     cy.get("#Welded").click();
 
     cy.get("button").contains("Bow Thruster 2").click();
-    cy.get("#BowThrusterNA").click();
+    //cy.get("#BowThrusterNA").click();
 
     cy.get("input[value=Hinged]").click();
     cy.get("#VisibleYes").click();
@@ -822,10 +822,10 @@ describe("template spec", () => {
 
     //-------------------//
 
-    cy.get("#SternThrusterNA").click();
+    //cy.get("#SternThrusterNA").click();
 
     cy.get("input[value=Hinged]").click();
-    cy.get("#STVDfalse").click();
+    cy.get("#STVDtrue").click();
 
     cy.get("#STAnodes").type("3");
     cy.get("#STAMissing").click();
@@ -842,15 +842,15 @@ describe("template spec", () => {
 
     cy.get("button").contains("Stern Thruster 2").click();
 
-    cy.get("#SternThrusterNA").click();
+    //cy.get("#SternThrusterNA").click();
 
     cy.get("input[value=Hinged]").click();
-    cy.get("#STVDfalse").click();
+    cy.get("#ST2VDfalse").click();
 
-    cy.get("#STAnodes").type("3");
-    cy.get("#STAMissing").click();
-    cy.get("#STANA").click();
-    cy.get("#STARemaining").type("50");
+    cy.get("#ST2Anodes").type("3");
+    cy.get("#ST2AMissing").click();
+    cy.get("#ST2ANA").click();
+    // cy.get("#ST2ARemaining").type("50");
     cy.get("#StainlessFalse").click();
     cy.get("#BracketTrue").click();
     cy.get("#BladesTrue").click();
@@ -863,9 +863,9 @@ describe("template spec", () => {
 
     //-------------------//
     cy.get("div").contains("Transducers").click();
-    cy.get("input[value=Bow]").click();
-    cy.get("#TansducersFalse").click();
-    cy.get("input[value=Alt]").click();
+    cy.get("#ESLBow").click();
+    cy.get("#TransducerVDTrue").click();
+    cy.get("#SLAlt").click();
     cy.get("#SLTrue").click();
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Transducers not ok");
@@ -883,7 +883,7 @@ describe("template spec", () => {
     //-------------------//
 
     cy.get("div").contains("Rope Guard (s)").click();
-    cy.get("#RGGeneralCondition > input[value=Satisfactory]").click();
+    cy.get("#RGF").click();
     cy.get("#RGAssembly > input[value=Welded]").click();
     cy.get("#RGWeldSeams > input[value=Satisfactory]").click();
     cy.get("#RGVisibleDamage > input[value=yes]").click();
@@ -959,7 +959,7 @@ describe("template spec", () => {
     cy.get("#Blade 1Pitting").click();
     cy.get("#Blade 2Cavitation").click();
     cy.get("#Blade 3Crack").click();
-    cy.ge("#Blade 4Nick").click();
+    cy.get("#Blade 4Nick").click();
     cy.get("#Blade 5Dent").click();
     cy.get("#Blade 6Undulation").click();
     cy.get("#Blade 3Dent").click();
@@ -973,7 +973,7 @@ describe("template spec", () => {
     cy.get("#Blade 1Pitting").click();
     cy.get("#Blade 2Cavitation").click();
     cy.get("#Blade 3Crack").click();
-    cy.ge("#Blade 4Nick").click();
+    cy.get("#Blade 4Nick").click();
     cy.get("#Blade 5Dent").click();
     cy.get("#Blade 6Undulation").click();
     cy.get("#Blade 3Dent").click();
