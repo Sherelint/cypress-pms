@@ -995,7 +995,7 @@ describe("template spec", () => {
     cy.get("#RudderSkeg").find("input[value=Satisfactory]").click();
     cy.get("#RudderVisibleDamage").find("input[value=Missing]").click();
     cy.get("#RudderRemaining").type("50");
-    cy.get("RudderDrainPlugs").find("input[value=Intact]").click();
+    cy.get("#RudderDrainPlugs").find("input[value=Intact]").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Rudder not ok");
@@ -1004,10 +1004,10 @@ describe("template spec", () => {
 
     cy.get("div").contains("Rudder Clearances").click();
     cy.get("#MeasurementTaken").find("input[value=No]").click();
-    cy.get("#forward").find("#outlined-adorment-weight").type("10");
-    cy.get("#starboard").find("#outlined-adorment-weight").type("10");
-    cy.get("#aft").find("#outlined-adorment-weight").type("10");
-    cy.get("#portside").find("#outlined-adorment-weight").type("10");
+    cy.get("#forward").type("10");
+    cy.get("#starboard").type("10");
+    cy.get("#aft").type("10");
+    cy.get("#portside").type("10");
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Rudder Clearances not ok");
