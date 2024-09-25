@@ -884,24 +884,25 @@ describe("template spec", () => {
 
     cy.get("div").contains("Rope Guard (s)").click();
     cy.get("#RGF").click();
-    cy.get("#RGAssembly > input[value=Welded]").click();
-    cy.get("#RGWeldSeams > input[value=Satisfactory]").click();
-    cy.get("#RGVisibleDamage > input[value=yes]").click();
-    cy.get("#RGRopeCutters > input[value=Bolted]").click();
-    cy.get("#RGReadingHoles > input[value=Top]").click();
+    cy.get("#RGW").click();
+    cy.get("#RGWSPoor").click();
+    cy.get("#RGVTrue").click();
+    cy.get("#RGRCWelded").click();
+    cy.get("#RGReadingHoleTop").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Rope Guard not ok");
 
     //-------------------//
     cy.get("div").contains("Tail Shaft (s)").click();
-    cy.get("#TSGeneralCondition > input[value=Satisfactory]").click();
-    cy.get("#TSBoltsCondition > input[value=Fair]").click();
-    cy.get("#TSOilLeak > input[value=No]").click();
-    cy.get("TSWearDownTaken > input[value=No]").click();
+    cy.get("#TSGCFair").click();
+    cy.get("#TSBCPoor").click();
+    cy.get("#TSOFalse").click();
+    cy.get("#Present").click();
+    cy.get("#WearDownTrue").click();
     cy.get("#TopReading").type("20");
     cy.get("#BottomReading").type("30");
-    cy.get("#TSSecondShaft > input[value=No]").click();
+    cy.get("#TSSecondShaftFalse").click();
     cy.get("#SSTopReading").type("20");
     cy.get("#SSBottomReading").type("30");
 
@@ -912,72 +913,73 @@ describe("template spec", () => {
 
     cy.get("div").contains("Propeller (s)").click();
     cy.get("#Quantity").type("2");
-    cy.get("#PropellerType > input[value=Fixed]").click();
+    cy.get("#TypePitch").click();
     cy.get("#NoOfBlades").type("4");
-    cy.get("#PropellerCondition > input[value=Satisfactory]").click();
+    cy.get("#PConditionSatisfactory").click();
     cy.get("#PropellerDiameter").type("1");
-    cy.get("BoltAssemblyIntact > input[value=true]").click();
-    cy.get("#PropellerBossCone > input[value=Fair]").click();
-    cy.get("#PropellerCementCoversIntact > input[value=true]").click();
+    cy.get("#BAIntactTrue").click();
+    cy.get("#BossConePoor").click();
+    cy.get("#CCoversIntactFalse").click();
+    cy.get("#BAIntactTrue").click();
 
     cy.get("button").contains("Pressure Side").click();
-    cy.get("#BeforePolish > #1").type("A");
-    cy.get("#BeforePolish > #2").type("B");
-    cy.get("#BeforePolish > #3").type("C");
-    cy.get("#BeforePolish > #4").type("D");
-    cy.get("#BeforePolish > #5").type("E");
-    cy.get("#BeforePolish > #6").type("F");
+    cy.get("#BeforePolish").find("#1").type("A");
+    cy.get("#BeforePolish").find("#2").type("B");
+    cy.get("#BeforePolish").find("#3").type("C");
+    cy.get("#BeforePolish").find("#4").type("D");
+    cy.get("#BeforePolish").find("#5").type("E");
+    cy.get("#BeforePolish").find("#6").type("F");
 
-    cy.get("#AfterPolish > #1").type("A");
-    cy.get("#AfterPolish > #2").type("B");
-    cy.get("#AfterPolish > #3").type("C");
-    cy.get("#AfterPolish > #4").type("D");
-    cy.get("#AfterPolish > #5").type("E");
-    cy.get("#AfterPolish > #6").type("F");
+    cy.get("#AfterPolish").find("#1").type("A");
+    cy.get("#AfterPolish").find("#2").type("B");
+    cy.get("#AfterPolish").find("#3").type("C");
+    cy.get("#AfterPolish").find("#4").type("D");
+    cy.get("#AfterPolish").find("#5").type("E");
+    cy.get("#AfterPolish").find("#6").type("F");
 
     cy.get("button").contains("Suction Side").click();
-    cy.get("#BeforePolish > #1").type("A");
-    cy.get("#BeforePolish > #2").type("B");
-    cy.get("#BeforePolish > #3").type("C");
-    cy.get("#BeforePolish > #4").type("D");
-    cy.get("#BeforePolish > #5").type("E");
-    cy.get("#BeforePolish > #6").type("F");
+    cy.get("#BeforePolish").find("#1").type("A");
+    cy.get("#BeforePolish").find("#2").type("B");
+    cy.get("#BeforePolish").find("#3").type("C");
+    cy.get("#BeforePolish").find("#4").type("D");
+    cy.get("#BeforePolish").find("#5").type("E");
+    cy.get("#BeforePolish").find("#6").type("F");
 
-    cy.get("#AfterPolish > #1").type("A");
-    cy.get("#AfterPolish > #2").type("B");
-    cy.get("#AfterPolish > #3").type("C");
-    cy.get("#AfterPolish > #4").type("D");
-    cy.get("#AfterPolish > #5").type("E");
-    cy.get("#AfterPolish > #6").type("F");
+    cy.get("#AfterPolish").find("#1").type("A");
+    cy.get("#AfterPolish").find("#2").type("B");
+    cy.get("#AfterPolish").find("#3").type("C");
+    cy.get("#AfterPolish").find("#4").type("D");
+    cy.get("#AfterPolish").find("#5").type("E");
+    cy.get("#AfterPolish").find("#6").type("F");
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Propeller not ok");
 
     //-------------------//
-
-    cy.get("#Blade 6NoItemsOfConcern").click();
-    cy.get("#Blade 1Pitting").click();
-    cy.get("#Blade 2Cavitation").click();
-    cy.get("#Blade 3Crack").click();
-    cy.get("#Blade 4Nick").click();
-    cy.get("#Blade 5Dent").click();
-    cy.get("#Blade 6Undulation").click();
-    cy.get("#Blade 3Dent").click();
-    cy.get("#Blade 4SerratedEdge").click();
+    cy.get("div").contains("Blade Condition").click();
+    cy.get("#Blade6NoItemsOfConcern").click();
+    cy.get("#Blade1Pitting").click();
+    cy.get("#Blade2Cavitation").click();
+    cy.get("#Blade3Crack").click();
+    cy.get("#Blade4Nick").click();
+    cy.get("#Blade5Dent").click();
+    cy.get("#Blade6Undulation").click();
+    cy.get("#Blade3Dent").click();
+    cy.get("#Blade4SerratedEdge").click();
 
     //-------------------//
 
     cy.get("button").contains("Suction Side").click();
 
-    cy.get("#Blade 6NoItemsOfConcern").click();
-    cy.get("#Blade 1Pitting").click();
-    cy.get("#Blade 2Cavitation").click();
-    cy.get("#Blade 3Crack").click();
-    cy.get("#Blade 4Nick").click();
-    cy.get("#Blade 5Dent").click();
-    cy.get("#Blade 6Undulation").click();
-    cy.get("#Blade 3Dent").click();
-    cy.get("#Blade 4SerratedEdge").click();
+    cy.get("#Blade6NoItemsOfConcern").click();
+    cy.get("#Blade1Pitting").click();
+    cy.get("#Blade2Cavitation").click();
+    cy.get("#Blade3Crack").click();
+    cy.get("#Blade4Nick").click();
+    cy.get("#Blade5Dent").click();
+    cy.get("#Blade6Undulation").click();
+    cy.get("#Blade3Dent").click();
+    cy.get("#Blade4SerratedEdge").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Blades  not ok");
@@ -985,15 +987,15 @@ describe("template spec", () => {
     //-------------------//
 
     cy.get("div").contains("Rudder").click();
-    cy.get("#RudderPlateCondition > input[value=Satisfactory]").click();
-    cy.get("#RudderWeldingCondition > input[value=Satisfactory]").click();
-    cy.get("#RudderCornerPlates > input[value=Satisfactory]").click();
-    cy.get("#RudderHorn > input[value=Satisfactory]").click();
-    cy.get("#RudderAccessCoverPlate > input[value=Bolted]").click();
-    cy.get("#RudderSkeg > input[value=Satisfactory]").click();
-    cy.get("#RudderVisibleDamage > input[value=Missing]").click();
+    cy.get("#RudderPlateCondition").find("input[value=Satisfactory]").click();
+    cy.get("#RudderWeldingCondition").find("input[value=Satisfactory]").click();
+    cy.get("#RudderCornerPlates").find("input[value=Satisfactory]").click();
+    cy.get("#RudderHorn").find("input[value=Satisfactory]").click();
+    cy.get("#RudderAccessCoverPlate").find("input[value=Bolted]").click();
+    cy.get("#RudderSkeg").find("input[value=Satisfactory]").click();
+    cy.get("#RudderVisibleDamage").find("input[value=Missing]").click();
     cy.get("#RudderRemaining").type("50");
-    cy.get("RudderDrainPlugs > input[value=Intact]").click();
+    cy.get("RudderDrainPlugs").find("input[value=Intact]").click();
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Rudder not ok");
@@ -1001,11 +1003,11 @@ describe("template spec", () => {
     //-------------------//
 
     cy.get("div").contains("Rudder Clearances").click();
-    cy.get("#MeasurementTaken > input[value=No]").click();
-    cy.get("#forward > #outlined-adorment-weight").type("10");
-    cy.get("#starboard > #outlined-adorment-weight").type("10");
-    cy.get("#aft > #outlined-adorment-weight").type("10");
-    cy.get("#portside > #outlined-adorment-weight").type("10");
+    cy.get("#MeasurementTaken").find("input[value=No]").click();
+    cy.get("#forward").find("#outlined-adorment-weight").type("10");
+    cy.get("#starboard").find("#outlined-adorment-weight").type("10");
+    cy.get("#aft").find("#outlined-adorment-weight").type("10");
+    cy.get("#portside").find("#outlined-adorment-weight").type("10");
 
     cy.get("button").contains("Remarks").click();
     cy.get("#Remarks").type("Rudder Clearances not ok");
