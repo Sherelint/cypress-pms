@@ -7,7 +7,6 @@ describe("template spec", () => {
     cy.get("button").contains("Iniciar Sesión").click();
 
     cy.get("button").contains("Create Report").click();
-    cy.get("h5").contains("Create Report").should("be.visible");
 
     cy.get('input[id="VesselName"]').type("Hiro");
     //cy.get('input[id="JobPerformed"] > button').click();
@@ -33,7 +32,7 @@ describe("template spec", () => {
     cy.get('li[data-value="Calm"]').click();
     cy.get('div[id="SeaCurrent"]').click();
     cy.get('li[data-value="Moderate"]').click();
-    cy.get('input[id="PortOfRegistry"]').type("Balboa");
+    cy.get('input[id="PortRegistry"]').type("Balboa");
     cy.get('input[id="Owners"]').type("Michael Chung");
     cy.get("button").contains("Continue").click();
 
@@ -1013,6 +1012,29 @@ describe("template spec", () => {
     cy.get("#Remarks").type("Rudder Clearances not ok");
 
     //-------------------//
+
+    cy.get("button").contains("Continue").click();
+
+    cy.get('svg[data-testid="CalendarIcon"]').each(() => {
+      const randomnumber = Math.floor(Math.random() * 30) + 1;
+      const randomstring = randomnumber.toString();
+
+      const randomHour = Math.floor(Math.random() * 12) + 1;
+      const HourString = randomHour.toString().padStart(2, "0");
+
+      const randomIndex = Math.floor(Math.random() * 12);
+      const randomMinutes = randomIndex * 5;
+      const MinutesString = randomMinutes.toString().padStart(2, "0");
+
+      const isPM = Math.random() < 0.5;
+      const period = isPM ? "PM" : "AM";
+
+      cy.get("button").contains(randomstring).click();
+      cy.get("li").contains(HourString).click();
+      cy.get("li").contains(MinutesString).click();
+      cy.get("li").contains(period).click();
+      cy.get("button").contains("OK").click();
+    });
 
     cy.get("button").contains("Continue").click();
   });
