@@ -9,7 +9,10 @@ describe("template spec", () => {
     cy.get("button").contains("Create Report").click();
 
     cy.get('input[id="VesselName"]').type("Hiro");
-    //cy.get('input[id="JobPerformed"] > button').click();
+
+    cy.get('svg[data-testid="CalendarIcon"]').click();
+    cy.get('.MuiPickersDay-today').click();
+
     cy.get('div[id="simple-select"]').click();
     cy.get('li[data-value="Refloat"]').click();
 
