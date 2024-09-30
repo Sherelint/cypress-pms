@@ -12,6 +12,7 @@ describe("template spec", () => {
     
     cy.get('button[aria-label="Choose date"]').each(($el, index, $list) => {
       cy.wrap($el).click();
+      cy.wait(1000);
       cy.get('button[aria-current="date"]').click({multiple: true});
       cy.get("button").contains("OK").click({multiple: true});
     });
